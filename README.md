@@ -20,7 +20,7 @@ Each stack has its own `docker-compose.yml` and `.env` file for configuration.
 
 ## Stack Interactions
 
-- **Networking:** All stacks (except Frigate, which uses its own) connect to the same external Docker network (`homeassistant`), allowing seamless communication between services.
+- **Networking:** All stacks connect to the same external Docker network (`homeassistant`), allowing seamless communication between services.
 - **Data Flow:**
   - Home Assistant utilizes **EMQX** for MQTT messaging, **Zigbee2MQTT** for Zigbee device integration, and **Node-RED** for advanced automations.
   - **InfluxDB** and **MariaDB** (from `data-logger`) are used by Home Assistant for long-term data storage and the recorder function.
