@@ -50,7 +50,7 @@
     *   ไปที่เมนู **Clients** -> **OAuth 2.0 Client IDs**.
     *   คลิกที่ **Create client** ระบุ Application type เป็น **Web application** และ ตั้งชื่อ (เช่น `Google Assistant`).
     *   **Authorized redirect URIs:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/authorize` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ)
-    *   
+        
     ![Authorized redirect URIs](assets/google-home-2.png) 
 
     *   คลิก **Create**.
@@ -68,12 +68,12 @@
     *   
     ![App Information](assets/google-home-4.png) 
 
-        *   **OAuth Client ID:** ใส่ `https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID` (แทน `YOUR_PROJECT_ID` ด้วย Project ID ที่ได้จากขั้นตอนที่ 3 (ตัวอย่าง `548725444099-3p3nl6ex69e6lh3kbvbob04vb5lljhbf.apps.googleusercontent.com`).
-        *   **Client secret:** ใส่ Client Secret ที่ได้จากขั้นตอนที่ 3.
-        *   **Authorization URL:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/authorize` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
-        *   **Token URL:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/token` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
-        *   **Cloud fulfillment URL:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/api/google_assistant` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
-        *   คลิก **Next**.
+    *   **OAuth Client ID:** ใส่ `https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID` (แทน `YOUR_PROJECT_ID` ด้วย Project ID ที่ได้จากขั้นตอนที่ 3 (ตัวอย่าง `548725444099-3p3nl6ex69e6lh3kbvbob04vb5lljhbf.apps.googleusercontent.com`).
+    *   **Client secret:** ใส่ Client Secret ที่ได้จากขั้นตอนที่ 3.
+    *   **Authorization URL:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/authorize` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
+    *   **Token URL:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/token` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
+    *   **Cloud fulfillment URL:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/api/google_assistant` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
+    *   คลิก **Next**.
     *   **กำหนด Scopes:**
         *   คลิก **+ Add scope** สองครั้ง.
         *   เพิ่ม Scope แรก: `email`.
