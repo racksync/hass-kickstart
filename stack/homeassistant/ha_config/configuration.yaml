@@ -1,0 +1,43 @@
+homeassistant:
+  customize: !include customize.yaml
+  customize_glob: !include customize_glob.yaml
+  allowlist_external_dirs:
+    - /config/www/camera
+
+default_config:
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+#automation: !include includes/automations.yaml
+#binary_sensor: !include includes/binary_sensor.yaml
+#camera: !include includes/camera/camera.yaml
+#climate: !include includes/climate.yaml
+#google_assistant: !include includes/google_assistant.yaml
+#group: !include includes/groups.yaml
+http: !include includes/http.yaml
+#image_processing: !include includes/image_processing.yaml 
+#influxdb: !include includes/influxdb.yaml
+#input_boolean: !include includes/input_boolean.yaml
+#input_button: !include includes/input_button.yaml
+#input_datetime: !include includes/input_datetime.yaml
+#input_number: !include includes/input_number.yaml
+#input_select: !include includes/input_select.yaml
+#input_text: !include includes/input_text.yaml
+#mqtt: !include includes/mqtt.yaml
+#notify: !include includes/notify.yaml
+#panel_custom: !include includes/panel.yaml
+#scrape: !include_dir_merge_list includes/scrape
+#script: !include includes/scripts.yaml
+#scene: !include includes/scenes.yaml
+#sensor: !include_dir_merge_list includes/sensors
+#telegram_bot: !include includes/telegram.yaml
+#tts:  !include includes/tts.yaml
+#utility_meter: !include includes/utility.yaml
+#zone: !include includes/zone.yaml
+
+# Logging
+recorder: !include includes/recorder/recorder.yaml
+history: !include includes/recorder/history.yaml
+logbook: !include includes/recorder/logbook.yaml
+logger: !include includes/logger.yaml

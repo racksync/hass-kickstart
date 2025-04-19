@@ -1,0 +1,4 @@
+#- platform: hikvision
+#  host: 192.168.10.10
+#  username: !secret hikvision_nvr_user
+#  password: !secret hikvision_nvr_pass

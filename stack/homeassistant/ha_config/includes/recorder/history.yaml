@@ -1,0 +1,37 @@
+include:
+  entities:
+    - climate.ac_11217195
+exclude:
+  domains:
+    - device_tracker
+    - input_boolean
+    - input_number
+    - input_datetime
+    - input_select
+    - number
+    - update
+    - select
+    - camera
+    - climate
+#    - binary_sensor
+    - automation
+    - media_player
+    - sensor
+    - light
+    - person
+    - weather
+    - zone
+    - sun
+    - switch
+    - cloud
+    - image
+  entities:
+    - binary_sensor.updater
+    - sensor.hacs
+    - sensor.disk_free
+    - sensor.disk_use_percent
+    - sensor.last_boot
+    - sensor.memory_use_percent
+    - sensor.processor_temperature
+    - sensor.processor_use
+    - sun.sun

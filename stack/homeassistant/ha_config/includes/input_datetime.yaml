@@ -1,0 +1,105 @@
+# HOME ASSISTANT HELPER - DATE/TIME
+
+ac_start_time:
+  name: ชั่วโมงที่ต้องการเริ่มระบบสลับแอร์อัตโนมัติ
+  has_date: false
+  has_time: true
+  icon: mdi:av-timer
+
+on_time_1:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_1:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+on_time_2:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_2:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+
+on_time_3:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_3:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+
+on_time_4:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_4:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+on_time_5:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_5:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+on_time_6:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_6:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+on_time_7:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_7:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+on_time_8:
+  name: เวลาเปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline
+
+off_time_8:
+  name: เวลาปิด
+  has_date: false
+  has_time: true
+  icon: mdi:clock-time-eight-outline

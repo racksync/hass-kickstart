@@ -1,0 +1,10 @@
+host: !secret influx_host
+port: 8086
+database: hass
+username: !secret influx_user
+password: !secret influx_pass
+max_retries: 3
+default_measurement: state
+include:
+ entities:
+    - sensor.weather_01_temperature

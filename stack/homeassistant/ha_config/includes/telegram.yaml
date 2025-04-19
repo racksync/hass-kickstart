@@ -1,0 +1,5 @@
+- platform: polling
+    api_key: YOUR_API_KEY
+    allowed_chat_ids:
+      - CHAT_ID_1 # example: 123456789 for the chat_id of a user
+      - CHAT_ID_2 # example: -987654321 for the chat_id of a group

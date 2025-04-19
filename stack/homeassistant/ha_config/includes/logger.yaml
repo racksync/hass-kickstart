@@ -1,0 +1,12 @@
+  default: error
+  logs:
+    homeassistant.core: error
+    custom_components.hacs: error
+    custom_components.frigate: error
+    homeassistant.components.mqtt: error
+    homeassistant.helpers.template: critical
+    hacs: error
+    frigate.app: error
+    frigate.mqtt: error
+    frigate.edgetpu: error
+    frigate.zeroconf: error

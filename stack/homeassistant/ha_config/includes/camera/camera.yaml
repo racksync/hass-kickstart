@@ -1,0 +1,5 @@
+# HikVision
+#- platform: ffmpeg
+#  name: cam01
+#  input: -rtsp_transport tcp -i rtsp://admin:Helloworld@xxx:554/Streaming/Channels/101/
+#  extra_arguments: '-vf scale=1280:720'

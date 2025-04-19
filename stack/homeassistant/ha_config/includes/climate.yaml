@@ -1,0 +1,35 @@
+- platform: smartir
+  name: ac1
+  unique_id: ac1
+  device_code: 1121
+  controller_data: remote.broadlink
+  temperature_sensor: sensor.temperature
+  humidity_sensor: sensor.humidity
+  power_sensor: switch.ac1
+
+- platform: smartir
+  name: ac2
+  unique_id: ac2
+  device_code: 1121
+  controller_data: remote.broadlink
+  temperature_sensor: sensor.temperature
+  humidity_sensor: sensor.humidity
+  power_sensor: switch.ac2
+
+- platform: smartir
+  name: ac3
+  unique_id: ac3
+  device_code: 1121
+  controller_data: remote.broadlink
+  temperature_sensor: sensor.temperature
+  humidity_sensor: sensor.humidity
+  power_sensor: switch.ac3
+
+- platform: smartir
+  name: ac4
+  unique_id: ac4
+  device_code: 1121
+  controller_data: remote.broadlink
+  temperature_sensor: sensor.temperature
+  humidity_sensor: sensor.humidity
+  power_sensor: switch.ac4

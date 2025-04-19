@@ -1,0 +1,77 @@
+sensor:
+  # Temp
+  - name: "Average Temperature"
+    state_topic: "racksync/average/temperature"
+    suggested_display_precision: 2
+    unit_of_measurement: "°C"
+    #value_template: "{{ value_json.temperature | round(2) }}"
+    icon: mdi:thermometer
+
+  - name: "Average Humidity"
+    state_topic: "racksync/average/humidity"
+    unit_of_measurement: "%"
+    #value_template: "{{ value_json.humidity | round(2) }}"
+    icon: mdi:water-percent
+
+  # Power
+  - name: "Power Total"
+    state_topic: "racksync/power/realtime"
+    unit_of_measurement: "W"
+    #value_template: "{{ value_json.humidity | round(2) }}"
+    icon: mdi:transmission-tower-export
+
+  - name: "Highest Power"
+    state_topic: "racksync/power/highest"
+    unit_of_measurement: "W"
+    icon: mdi:power-plug
+
+  # Energy
+  - name: "Energy Total"
+    state_topic: "racksync/energy/total"
+    suggested_display_precision: 2
+    unit_of_measurement: "kWh"
+    icon: mdi:exponent
+    #state_class: measurement
+    state_class: total_increasing
+    device_class: energy
+
+  - name: "Energy Daily"
+    state_topic: "racksync/energy/daily"
+    suggested_display_precision: 2
+    unit_of_measurement: "kWh"
+    icon: mdi:exponent
+    #state_class: measurement
+    state_class: total_increasing
+    device_class: energy
+
+# SMOKE
+
+binary_sensor:
+  - name: "smoke 01"
+    state_topic: "racksync/binary/smoke01"
+    payload_on: "on"
+    payload_off: "off"
+    qos: 0
+    device_class: smoke
+    icon: mdi:smoke
+  - name: "smoke 02"
+    state_topic: "racksync/binary/smoke02"
+    payload_on: "on"
+    payload_off: "off"
+    qos: 0
+    device_class: smoke
+    icon: mdi:smoke
+  - name: "smoke 03"
+    state_topic: "racksync/binary/smoke03"
+    payload_on: "on"
+    payload_off: "off"
+    qos: 0
+    device_class: smoke
+    icon: mdi:smoke
+  - name: "smoke 04"
+    state_topic: "racksync/binary/smoke04"
+    payload_on: "on"
+    payload_off: "off"
+    qos: 0
+    device_class: smoke
+    icon: mdi:smoke

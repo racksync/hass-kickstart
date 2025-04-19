@@ -1,0 +1,110 @@
+# HOME ASSISTANT HELPER - INPUT BOOLEAN (TOGGLE)
+
+line_notify:
+  name: แจ้งเตือน LINE
+  icon: mdi:message-bulleted
+
+telegram_notify:
+  name: แจ้งเตือน Telegram
+  icon: mdi:message-bulleted
+
+
+power_monitor:
+  name: ตรวจวัดพลังงาน
+  icon: mdi:transmission-tower-import
+
+camera_snap:
+  name: ส่งภาพเมื่อตรวจพบความเคลื่อนไหว
+  icon: mdi:camera
+
+camera_ai:
+  name: วิเคราะห์ภาพจากกล้องด้วย AI
+  icon: mdi:camera
+
+air_condition_automate:
+  name: เปิดใช้ระบบสลับเครื่องปรับอากาศ
+  icon: mdi:air-filter
+
+smoke_detect:
+  name: แจ้งเตือนเมื่อตรวจเจอควัน
+  icon: mdi:smoke
+
+water_leak_detect:
+  name: แจ้งเตือนเมื่อตรวจเจอน้ำรั่ว
+  icon: mdi:pipe-leak
+
+door_notify:
+  name: แจ้งเตือนเซ็นเซอร์ประตูและ rack
+  icon: mdi:door-open
+
+motion_detect:
+  name: ตรวจจับความเคลื่อนไหว
+  icon: mdi:motion-sensor
+
+temp_humid_notify:
+  name: แจ้งเตือนอุณหภูมิและความชื้น
+  icon: mdi:temperature-celsius
+
+heartbeat_monitor:
+  name: แจ้งเตือนอุปกรณ์ Offline
+  icon: mdi:server-network
+
+condition_temp_humid_1:
+  name: ตรวจวัดอุณหภูมิและความชื้น 1
+  icon: mdi:home-thermometer
+
+condition_temp_humid_2:
+  name: ตรวจวัดอุณหภูมิและความชื้น 2
+  icon: mdi:home-thermometer
+
+condition_temp_humid_3:
+  name: ตรวจวัดอุณหภูมิและความชื้น 3
+  icon: mdi:home-thermometer
+
+condition_temp_humid_4:
+  name: ตรวจวัดอุณหภูมิและความชื้น 4
+  icon: mdi:home-thermometer
+
+condition_temp_humid_5:
+  name: ตรวจวัดอุณหภูมิและความชื้น 5
+  icon: mdi:home-thermometer
+
+condition_temp_humid_6:
+  name: ตรวจวัดอุณหภูมิและความชื้น 6
+  icon: mdi:home-thermometer
+
+automate_light:
+  name: เปิดไฟอัตโนมัติ
+  icon: mdi:alarm-light-outline
+
+schedule_light_1:
+  name: เปิดไฟตามช่วงเวลา
+  icon: mdi:alarm-light-outline
+
+schedule_light_2:
+  name: เปิดไฟตามช่วงเวลา
+  icon: mdi:alarm-light-outline
+
+schedule_light_3:
+  name: เปิดไฟตามช่วงเวลา
+  icon: mdi:alarm-light-outline
+
+schedule_light_4:
+  name: เปิดไฟตามช่วงเวลา
+  icon: mdi:alarm-light-outline
+
+schedule_switch_1:
+  name: เปิดสวิทตามช่วงเวลา
+  icon: mdi:alarm-light-outline
+
+schedule_switch_2:
+  name: เปิดสวิทตามช่วงเวลา
+  icon: mdi:alarm-light-outline
+
+schedule_switch_3:
+  name: เปิดสวิทตามช่วงเวลา
+  icon: mdi:alarm-light-outline
+
+schedule_switch_4:
+  name: เปิดสวิทตามช่วงเวลา
+  icon: mdi:alarm-light-outline

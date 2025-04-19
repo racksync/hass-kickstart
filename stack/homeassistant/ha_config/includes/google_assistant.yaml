@@ -1,0 +1,9 @@
+  project_id: my-house-b894b 
+  service_account: !include google_service_account.json
+  report_state: true
+  exposed_domains:
+    - switch
+    - light
+    - sensor
+    - binary_sensor
+    - climate

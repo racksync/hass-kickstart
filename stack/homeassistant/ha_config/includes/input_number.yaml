@@ -1,0 +1,202 @@
+# HOME ASSISTANT HELPER - NUMBER (SLIDER OR INPUT BOX)
+
+watts_threshold:
+  name: แจ้งเตือนพลังงานเกิน
+  min: 0
+  max: 4000
+  step: 1
+  icon: mdi:home-lightning-bolt-outline
+  unit_of_measurement: W
+
+ac_time_interval:
+  name: ระยะห่างการทำงานของแอร์​
+  min: 1
+  max: 12
+  step: 1
+  icon: mdi:av-timer
+  unit_of_measurement: ชั่วโมง
+
+
+# TEMP & HUMID SETPOINT
+
+setpoint_temp_max:
+  name: แจ้งเตือนอุณหภูมิสูง ⬆️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-up
+  unit_of_measurement: °C
+
+setpoint_temp_min:
+  name: แจ้งเตือนอุณหภูมิต่ำ ⬇️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-down
+  unit_of_measurement: °C
+
+setpoint_humid_max:
+  name: แจ้งเตือนความชื้นสูง ⬆️
+  initial: 50
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+setpoint_humid_min:
+  name: แจ้งเตือนความชื้นต่ำ ⬇️
+  initial: 40
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+
+setpoint_temp_1_max:
+  name: แจ้งเตือนอุณหภูมิสูง ⬆️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-up
+  unit_of_measurement: °C
+
+setpoint_temp_1_min:
+  name: แจ้งเตือนอุณหภูมิต่ำ ⬇️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-down
+  unit_of_measurement: °C
+
+setpoint_humid_1_max:
+  name: แจ้งเตือนความชื้นสูง ⬆️
+  initial: 50
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+setpoint_humid_1_min:
+  name: แจ้งเตือนความชื้นต่ำ ⬇️
+  initial: 40
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+setpoint_temp_2_max:
+  name: แจ้งเตือนอุณหภูมิสูง ⬆️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-up
+  unit_of_measurement: °C
+
+setpoint_temp_2_min:
+  name: แจ้งเตือนอุณหภูมิต่ำ ⬇️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-down
+  unit_of_measurement: °C
+
+setpoint_humid_2_max:
+  name: แจ้งเตือนความชื้นสูง ⬆️
+  initial: 50
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+setpoint_humid_2_min:
+  name: แจ้งเตือนความชื้นต่ำ ⬇️
+  initial: 40
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+
+setpoint_temp_3_max:
+  name: แจ้งเตือนอุณหภูมิสูง ⬆️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-up
+  unit_of_measurement: °C
+
+setpoint_temp_3_min:
+  name: แจ้งเตือนอุณหภูมิต่ำ ⬇️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-down
+  unit_of_measurement: °C
+
+setpoint_humid_3_max:
+  name: แจ้งเตือนความชื้นสูง ⬆️
+  initial: 50
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+setpoint_humid_3_min:
+  name: แจ้งเตือนความชื้นต่ำ ⬇️
+  initial: 40
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+
+setpoint_temp_4_max:
+  name: แจ้งเตือนอุณหภูมิสูง ⬆️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-up
+  unit_of_measurement: °C
+
+setpoint_temp_4_min:
+  name: แจ้งเตือนอุณหภูมิต่ำ ⬇️
+  min: 10
+  max: 50
+  step: 1
+  icon: mdi:thermometer-chevron-down
+  unit_of_measurement: °C
+
+setpoint_humid_4_max:
+  name: แจ้งเตือนความชื้นสูง ⬆️
+  initial: 50
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+setpoint_humid_4_min:
+  name: แจ้งเตือนความชื้นต่ำ ⬇️
+  initial: 40
+  min: 10
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+
+delay_light_off:
+  name: หน่วงเวลาปิดไฟเมื่อไม่มีบุคคล
+  initial: 5
+  min: 5
+  max: 20
+  step: 1
+  icon: mdi:timer-10
+  unit_of_measurement: นาที

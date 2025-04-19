@@ -1,0 +1,10 @@
+- platform: google_translate
+  service_name: google_say
+  cache: true
+  time_memory: 300
+#  base_url: https://demo.everyha.com
+
+#- platform: edge_tts
+#  service_name: xiaomo_say 
+#  language: th-TH-PremwadeeNeural
+#  volume: 100.0

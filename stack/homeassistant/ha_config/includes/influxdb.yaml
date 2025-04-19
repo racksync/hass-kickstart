@@ -1,0 +1,30 @@
+api_version: 2
+host: 192.168.0.5
+port: 8086
+token: xxxxxx  # token from influxdb initialization
+organization:  #  organization from influxdb configuration
+ssl: false
+verify_ssl: false
+bucket: hass
+
+tags:
+  source: HA
+tags_attributes:
+  - friendly_name
+default_measurement: state
+exclude:
+  entities:
+    - zone.home
+  domains:
+    - persistent_notification
+    - person
+include:
+  domains:
+    #- sensor
+    #- binary_sensor
+    #- sun
+  entities:
+    # EMON-01
+    - sensor.obh_emon3p_01_energy_current_0
+    - sensor.obh_emon3p_01_energy_current_1
+    - sensor.obh_emon3p_01_energy_current_2

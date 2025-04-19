@@ -1,0 +1,3 @@
+#db_url: mysql://homeassistant:homeassistant@core-mariadb/homeassistant?charset=utf8mb4
+purge_keep_days: 120
+commit_interval: 7
