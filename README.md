@@ -91,7 +91,7 @@ Please check the issue tracker for similar issues before creating one.
 ## Home Automation Consultant Services
 - [RACKSYNC CO., LTD.](https://racksync.com)
 
-[screenshot]: screenshot.png "Home Assistant Training Course by RACKSYNC CO., LTD."
+[screenshot]: assets/screenshot.png "Home Assistant Training Course by RACKSYNC CO., LTD."
 
 ## License Agreement
 By using this stack, you agree to the terms and conditions of the respective licenses for each of the components included in the stack.
