@@ -1,0 +1,18 @@
+# Prevent committing sensitive environment files with real credentials
+.DS_Store
+*.env
+!default.env
+!sample.env
+
+# Data directories
+*/data
+emqx_data/
+emqx_log/
+influxdb/
+grafana/
+mariadb/
+chronograf/
+portainer_data/
+ha_config/
+node-red/
+zigbee2mqtt/
