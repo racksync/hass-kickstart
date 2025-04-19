@@ -13,6 +13,6 @@ grafana/
 mariadb/
 chronograf/
 portainer_data/
-ha_config/
+#ha_config/
 node-red/
 zigbee2mqtt/
