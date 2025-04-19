@@ -77,6 +77,8 @@ docker compose up -d
 ### 4. Access Services
 
 - Home Assistant: http://localhost:8123
+- EMQX: http://localhost:8083
+- Zigbee2MQTT: http://localhost:8080
 - Portainer: http://localhost:9000
 - Node-RED: http://localhost:1880
 - Grafana: http://localhost:3000
