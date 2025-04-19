@@ -2,7 +2,7 @@
 
 ![image](assets/screenshot.png)
 
-This repository provides a modular Docker Compose setup for quickly getting started with Home Assistant and related services. Each stack is organized into its own directory under `stack/`, making it easy to install, maintain, and extend your smart home infrastructure.
+Repository เตรียม Docker Compose สำหรับเริ่มต้นใช้งาน Home Assistant และบริการที่เกี่ยวข้องได้อย่างรวดเร็ว โดยแต่ละ stack จะถูกจัดเก็บไว้ในโฟลเดอร์ของตัวเองภายใต้ `stack/` เพื่อให้ง่ายต่อการติดตั้ง ดูแลรักษา และขยายระบบ smart home ของคุณ รวมถึงมี boilerplate สำหรับการตั้งค่า Home Assistant ที่สามารถนำไปใช้ได้ทันที โดยภายในประกอบด้วยการตั้งค่าพื้นฐานที่จำเป็น พร้อมสำหรับการใช้งาน โดยสามารถนำไปใช้กับ Home Assistant ในรูปแบบการติดตั้งแบบอื่นได้ เช่น การติดตั้งบน  Virtual Machine หรือ Home Assistant OS หรือ Supervised 
 
 ## Table of Contents
 - [Google Assistant Integration](docs/google-home-assistant.md)
@@ -12,28 +12,28 @@ This repository provides a modular Docker Compose setup for quickly getting star
 
 ## Directory Structure
 
-- `stack/homeassistant/` – Core Home Assistant stack (Automation, MQTT, Zigbee, Node-RED, Portainer)
-- `stack/data-logger/` – Data logging and visualization stack (InfluxDB, Grafana, MariaDB, Chronograf, phpMyAdmin)
-- `stack/frigate/` – NVR and AI video analytics stack (Frigate)
+- `stack/homeassistant/` – Stack หลักของ Home Assistant (Automation, MQTT, Zigbee, Node-RED, Portainer)
+- `stack/data-logger/` – Stack สำหรับ Data Logging และ Visualization (InfluxDB, Grafana, MariaDB, Chronograf, phpMyAdmin)
+- `stack/frigate/` – Stack สำหรับ NVR และ AI Video Analytics (Frigate)
 - 
-Each stack has its own `docker-compose.yml` and `.env` file for configuration.
+แต่ละ stack จะมีไฟล์ `docker-compose.yml` และ `.env` สำหรับการตั้งค่าของตัวเอง
 
 ## Stack Interactions
 
-- **Networking:** All stacks connect to the same external Docker network (`homeassistant`), allowing seamless communication between services.
+- **Networking:** ทุก stack จะเชื่อมต่อกับ external Docker network เดียวกัน (`homeassistant`) เพื่อให้บริการต่างๆ สื่อสารกันได้อย่างราบรื่น
 - **Data Flow:**
-  - Home Assistant utilizes **EMQX** for MQTT messaging, **Zigbee2MQTT** for Zigbee device integration, and **Node-RED** for advanced automations.
-  - **InfluxDB** and **MariaDB** (from `data-logger`) are used by Home Assistant for long-term data storage and the recorder function.
-  - **Grafana** and **Chronograf** visualize data from InfluxDB.
-  - **Frigate** (on its own `homeassistant` network) can integrate with Home Assistant for AI camera analysis and notifications via MQTT.
-- **Management:** **Portainer** provides a web UI to manage all Docker containers.
+  - Home Assistant ใช้ **EMQX** สำหรับ MQTT messaging, **Zigbee2MQTT** สำหรับเชื่อมต่ออุปกรณ์ Zigbee และ **Node-RED** สำหรับ automation ขั้นสูง
+  - **InfluxDB** และ **MariaDB** (จาก `data-logger`) ถูกใช้โดย Home Assistant สำหรับเก็บข้อมูลระยะยาวและฟังก์ชัน recorder
+  - **Grafana** และ **Chronograf** ใช้สำหรับ visualization ข้อมูลจาก InfluxDB
+  - **Frigate** (บน network `homeassistant` ของตัวเอง) สามารถเชื่อมต่อกับ Home Assistant เพื่อวิเคราะห์กล้องด้วย AI และแจ้งเตือนผ่าน MQTT
+- **Management:** **Portainer** ให้ web UI สำหรับจัดการ Docker containers ทั้งหมด
 
 ## Quick Start
 
 ### Prerequisites
 
-- Docker and Docker Compose installed.
-- Create the external Docker network:
+- ติดตั้ง Docker และ Docker Compose
+- สร้าง external Docker network:
   ```bash
   docker network create homeassistant
   ```
@@ -47,29 +47,29 @@ cd hass-kickstart
 
 ### 2. Configure Environment Variables
 
-Copy and edit the `.env.sample` files in each stack directory:
+คัดลอกและแก้ไขไฟล์ `.env.sample` ในแต่ละ stack directory:
 
 ```bash
 cp stack/homeassistant/.env.sample stack/homeassistant/.env
 cp stack/data-logger/.env.sample stack/data-logger/.env
 cp stack/frigate/.env.sample stack/frigate/.env
-# Edit each .env file as needed
+# แก้ไขแต่ละไฟล์ .env ตามต้องการ
 ```
 
 ### 3. Start the Stacks
 
-You can start each stack independently:
+คุณสามารถ start แต่ละ stack ได้อย่างอิสระ:
 
 ```bash
 # Core Home Assistant Stack
 cd stack/homeassistant
 docker compose up -d
 
-# Data Logger Stack (Optional)
+# Data Logger Stack (ถ้าต้องการ)
 cd ../data-logger
 docker compose up -d
 
-# Frigate NVR Stack (Optional)
+# Frigate NVR Stack (ถ้าต้องการ)
 cd ../frigate
 docker compose up -d
 ```
@@ -88,16 +88,16 @@ docker compose up -d
 
 ## Interaction Overview
 
-- **Home Assistant** connects to **MariaDB** for recorder/history and **InfluxDB** for time-series data.
-- **Grafana** and **Chronograf** visualize data from **InfluxDB**.
-- **Node-RED** and **Home Assistant** use **EMQX** for MQTT-based automations.
-- **Frigate** publishes AI camera events to MQTT, which Home Assistant can consume for automations and notifications.
+- **Home Assistant** เชื่อมต่อกับ **MariaDB** สำหรับ recorder/history และ **InfluxDB** สำหรับ time-series data
+- **Grafana** และ **Chronograf** ใช้สำหรับ visualization ข้อมูลจาก **InfluxDB**
+- **Node-RED** และ **Home Assistant** ใช้ **EMQX** สำหรับ automation ผ่าน MQTT
+- **Frigate** ส่ง event จาก AI camera ไปยัง MQTT ซึ่ง Home Assistant สามารถนำไปใช้สำหรับ automation และ notification
 
 ## Customization
 
-- Home Assistant configuration resides in `stack/homeassistant/ha_config/`.
-- Each stack's `.env` file controls versions and credentials.
-- You can add or remove stacks based on your needs.
+- การตั้งค่า Home Assistant อยู่ใน `stack/homeassistant/ha_config/`
+- ไฟล์ `.env` ของแต่ละ stack ใช้สำหรับกำหนดเวอร์ชันและ credentials
+- คุณสามารถเพิ่มหรือลบ stack ได้ตามต้องการ
 
 ## Credits
 
@@ -107,5 +107,5 @@ docker compose up -d
 
 ## License
 
-See [LICENSE.md](LICENSE.md) for details. Individual components are subject to their own licenses.
+ดูรายละเอียดที่ [LICENSE.md](LICENSE.md) ส่วนประกอบแต่ละตัวอยู่ภายใต้ license ของตัวเอง
 
