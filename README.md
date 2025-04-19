@@ -4,14 +4,17 @@
 
 Repository นี้มี Docker Compose แบบโมดูลาร์สำหรับเริ่มต้นใช้งาน Home Assistant และบริการที่เกี่ยวข้องอย่างรวดเร็ว แต่ละ stack ถูกจัดระเบียบไว้ในไดเรกทอรีของตัวเองภายใต้ `stack/` ทำให้ง่ายต่อการติดตั้ง บำรุงรักษา และขยายโครงสร้างพื้นฐานบ้านอัจฉริยะของคุณ
 
+## สารบัญเนื้อหา
+- [Google Assistant Integration](docs/google-home-assistant.md)
+
+
 ## โครงสร้างไดเรกทอรี
 
 - `stack/homeassistant/` – Stack หลักของ Home Assistant (ระบบอัตโนมัติ, MQTT, Zigbee, Node-RED, Portainer)
 - `stack/data-logger/` – Stack สำหรับบันทึกและแสดงข้อมูล (InfluxDB, Grafana, MariaDB, Chronograf, phpMyAdmin)
 - `stack/frigate/` – Stack สำหรับ NVR และการวิเคราะห์วิดีโอด้วย AI (Frigate)
 
-## สารบัญเนื้อหา
-- [Google Assistant Integration](docs/google-home-assistant.md)
+
 
 แต่ละ stack มีไฟล์ `docker-compose.yml` และ `.env` ของตัวเองสำหรับการกำหนดค่า
 
