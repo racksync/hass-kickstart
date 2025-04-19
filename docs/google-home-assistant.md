@@ -1,4 +1,4 @@
-# การตั้งค่า Google Assistant สำหรับ Home Assistant (แบบ Manual) อัพเดท 2025
+# การตั้งค่า Google Assistant สำหรับ Home Assistant ปี 2025
 
 สรุปขั้นตอนการตั้งค่า Google Assistant integration สำหรับ Home Assistant ด้วยวิธี Manual โดยอ้างอิงจาก [เอกสารอย่างเป็นทางการของ Home Assistant](https://www.home-assistant.io/integrations/google_assistant/) แต่เนื่องจากเอกสารต้นทางยังไม่ได้อัพเดทให้เนื้อหาเป็นปัจจุบัน จึงได้จัดทำคู่มือนี้ขึ้นเพื่อให้เข้าใจง่ายขึ้น ดังนั้นควรตรวจสอบเอกสารล่าสุดจาก Google เสมอ
 
@@ -129,8 +129,12 @@
 **หมายเหตุ:** ขั้นตอนอาจมีการเปลี่ยนแปลงตามการอัปเดตของ Google และ Home Assistant โปรดอ้างอิงเอกสารทางการล่าสุดเสมอ.
 
 ## แหล่งข้อมูลเพิ่มเติม
-- [Issue](https://github.com/home-assistant/core/issues/132515)
+- [Known Issue](https://github.com/home-assistant/core/issues/132515)
 - [Google Assistant Integration](https://www.home-assistant.io/integrations/google_assistant/)
 - [Google Cloud Console](https://console.cloud.google.com/)
 - [Google Home Developer Console](https://console.home.google.com/)
 - [Google Assistant API](https://developers.google.com/assistant/sdk)
+
+```
+Last updated: 2025-04-20
+```
