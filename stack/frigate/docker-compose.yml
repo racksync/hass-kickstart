@@ -24,12 +24,12 @@ services:
       - "8555:8555/tcp" # WebRTC over tcp
       - "8555:8555/udp" # WebRTC over udp
     networks:
-      - backend
+      - homeasisstant
     environment:
       FRIGATE_RTSP_PASSWORD: $FRIGATE_RTSP_PASSWORD
       TZ: $TIMEZONE
 
 networks:
-  backend:
-    name: backend
+  homeasisstant:
+    name: homeassistant
     external: true
