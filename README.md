@@ -1,5 +1,7 @@
 # Home Assistant Kickstart ด้วย Docker Compose (Modular Stacks)
 
+[image](assets/screenshot.png)
+
 Repository นี้มี Docker Compose แบบโมดูลาร์สำหรับเริ่มต้นใช้งาน Home Assistant และบริการที่เกี่ยวข้องอย่างรวดเร็ว แต่ละ stack ถูกจัดระเบียบไว้ในไดเรกทอรีของตัวเองภายใต้ `stack/` ทำให้ง่ายต่อการติดตั้ง บำรุงรักษา และขยายโครงสร้างพื้นฐานบ้านอัจฉริยะของคุณ
 
 ## โครงสร้างไดเรกทอรี
