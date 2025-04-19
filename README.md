@@ -2,79 +2,79 @@
 
 ![image](assets/screenshot.png)
 
-Repository นี้มี Docker Compose แบบโมดูลาร์สำหรับเริ่มต้นใช้งาน Home Assistant และบริการที่เกี่ยวข้องอย่างรวดเร็ว แต่ละ stack ถูกจัดระเบียบไว้ในไดเรกทอรีของตัวเองภายใต้ `stack/` ทำให้ง่ายต่อการติดตั้ง บำรุงรักษา และขยายโครงสร้างพื้นฐานบ้านอัจฉริยะของคุณ
+This repository provides a modular Docker Compose setup for quickly getting started with Home Assistant and related services. Each stack is organized into its own directory under `stack/`, making it easy to install, maintain, and extend your smart home infrastructure.
 
-## สารบัญเนื้อหา
+## Table of Contents
 - [Google Assistant Integration](docs/google-home-assistant.md)
 
+## Boilerplate
+- [Home Assistant Configuration](stack/homeassistant/ha_config/)
 
-## โครงสร้างไดเรกทอรี
+## Directory Structure
 
-- `stack/homeassistant/` – Stack หลักของ Home Assistant (ระบบอัตโนมัติ, MQTT, Zigbee, Node-RED, Portainer)
-- `stack/data-logger/` – Stack สำหรับบันทึกและแสดงข้อมูล (InfluxDB, Grafana, MariaDB, Chronograf, phpMyAdmin)
-- `stack/frigate/` – Stack สำหรับ NVR และการวิเคราะห์วิดีโอด้วย AI (Frigate)
+- `stack/homeassistant/` – Core Home Assistant stack (Automation, MQTT, Zigbee, Node-RED, Portainer)
+- `stack/data-logger/` – Data logging and visualization stack (InfluxDB, Grafana, MariaDB, Chronograf, phpMyAdmin)
+- `stack/frigate/` – NVR and AI video analytics stack (Frigate)
+- 
+Each stack has its own `docker-compose.yml` and `.env` file for configuration.
 
+## Stack Interactions
 
+- **Networking:** All stacks (except Frigate, which uses its own) connect to the same external Docker network (`homeassistant`), allowing seamless communication between services.
+- **Data Flow:**
+  - Home Assistant utilizes **EMQX** for MQTT messaging, **Zigbee2MQTT** for Zigbee device integration, and **Node-RED** for advanced automations.
+  - **InfluxDB** and **MariaDB** (from `data-logger`) are used by Home Assistant for long-term data storage and the recorder function.
+  - **Grafana** and **Chronograf** visualize data from InfluxDB.
+  - **Frigate** (on its own `homeassistant` network) can integrate with Home Assistant for AI camera analysis and notifications via MQTT.
+- **Management:** **Portainer** provides a web UI to manage all Docker containers.
 
-แต่ละ stack มีไฟล์ `docker-compose.yml` และ `.env` ของตัวเองสำหรับการกำหนดค่า
+## Quick Start
 
-## การทำงานร่วมกันของ Stacks
+### Prerequisites
 
-- **เครือข่าย:** ทุก stack (ยกเว้น Frigate ซึ่งใช้เครือข่ายของตัวเอง) เชื่อมต่อกับเครือข่าย Docker ภายนอกเดียวกัน (`homeassistant`) ทำให้บริการต่างๆ สามารถสื่อสารกันได้อย่างราบรื่น
-- **การไหลของข้อมูล:**
-  - Home Assistant ใช้ **EMQX** สำหรับการส่งข้อความ MQTT, **Zigbee2MQTT** สำหรับการรวมอุปกรณ์ Zigbee และ **Node-RED** สำหรับระบบอัตโนมัติขั้นสูง
-  - **InfluxDB** และ **MariaDB** (จาก `data-logger`) ถูกใช้โดย Home Assistant สำหรับการจัดเก็บข้อมูลระยะยาวและฟังก์ชัน recorder
-  - **Grafana** และ **Chronograf** แสดงข้อมูลจาก InfluxDB
-  - **Frigate** (ในเครือข่าย `homeassistant` ของตัวเอง) สามารถรวมเข้ากับ Home Assistant สำหรับการวิเคราะห์กล้องด้วย AI และการแจ้งเตือนผ่าน MQTT
-- **การจัดการ:** **Portainer** มีเว็บ UI สำหรับจัดการ Docker containers ทั้งหมด
-
-## เริ่มต้นใช้งานอย่างรวดเร็ว
-
-### ข้อกำหนดเบื้องต้น
-
-- ติดตั้ง Docker และ Docker Compose แล้ว
-- สร้างเครือข่าย Docker ภายนอก:
+- Docker and Docker Compose installed.
+- Create the external Docker network:
   ```bash
   docker network create homeassistant
   ```
 
-### 1. โคลน Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/racksync/hass-kickstart.git
 cd hass-kickstart
 ```
 
-### 2. กำหนดค่าตัวแปรสภาพแวดล้อม
+### 2. Configure Environment Variables
 
-คัดลอกและแก้ไขไฟล์ `.env.sample` ในแต่ละไดเรกทอรีของ stack:
+Copy and edit the `.env.sample` files in each stack directory:
 
 ```bash
 cp stack/homeassistant/.env.sample stack/homeassistant/.env
 cp stack/data-logger/.env.sample stack/data-logger/.env
 cp stack/frigate/.env.sample stack/frigate/.env
-# แก้ไขไฟล์ .env แต่ละไฟล์ตามต้องการ
+# Edit each .env file as needed
 ```
 
-### 3. เริ่มใช้งาน Stacks
+### 3. Start the Stacks
 
-คุณสามารถเริ่มแต่ละ stack ได้อย่างอิสระ:
+You can start each stack independently:
 
 ```bash
-# Stack หลักของ Home Assistant
+# Core Home Assistant Stack
 cd stack/homeassistant
 docker compose up -d
 
-# Stack สำหรับบันทึกข้อมูล (ทางเลือก)
+# Data Logger Stack (Optional)
 cd ../data-logger
 docker compose up -d
 
-# Stack Frigate NVR (ทางเลือก)
+# Frigate NVR Stack (Optional)
 cd ../frigate
 docker compose up -d
 ```
 
-### 4. เข้าถึงบริการต่างๆ
+### 4. Access Services
 
 - Home Assistant: http://localhost:8123
 - Portainer: http://localhost:9000
@@ -84,26 +84,26 @@ docker compose up -d
 - phpMyAdmin: http://localhost:8081
 - Frigate: http://localhost:5000
 
-## ภาพรวมการทำงานร่วมกัน
+## Interaction Overview
 
-- **Home Assistant** เชื่อมต่อกับ **MariaDB** สำหรับ recorder/history และ **InfluxDB** สำหรับข้อมูล time-series
-- **Grafana** และ **Chronograf** แสดงข้อมูลจาก **InfluxDB**
-- **Node-RED** และ **Home Assistant** ใช้ **EMQX** สำหรับระบบอัตโนมัติผ่าน MQTT
-- **Frigate** เผยแพร่เหตุการณ์จากกล้อง AI ไปยัง MQTT ซึ่ง Home Assistant สามารถนำไปใช้สำหรับระบบอัตโนมัติและการแจ้งเตือน
+- **Home Assistant** connects to **MariaDB** for recorder/history and **InfluxDB** for time-series data.
+- **Grafana** and **Chronograf** visualize data from **InfluxDB**.
+- **Node-RED** and **Home Assistant** use **EMQX** for MQTT-based automations.
+- **Frigate** publishes AI camera events to MQTT, which Home Assistant can consume for automations and notifications.
 
-## การปรับแต่ง
+## Customization
 
-- การกำหนดค่า Home Assistant อยู่ใน `stack/homeassistant/ha_config/`
-- ไฟล์ `.env` ของแต่ละ stack ควบคุมเวอร์ชันและข้อมูลประจำตัว
-- คุณสามารถเพิ่มหรือลบ stack ได้ตามความต้องการใช้งานของคุณ
+- Home Assistant configuration resides in `stack/homeassistant/ha_config/`.
+- Each stack's `.env` file controls versions and credentials.
+- You can add or remove stacks based on your needs.
 
-## เครดิต
+## Credits
 
 - [Home Assistant](https://www.home-assistant.io/)
 - [Frigate NVR](https://frigate.video/)
 - [RACKSYNC CO., LTD.](https://racksync.com)
 
-## ใบอนุญาต
+## License
 
-ดูรายละเอียดใน [LICENSE.md](LICENSE.md) ส่วนประกอบแต่ละอย่างอยู่ภายใต้ใบอนุญาตของตัวเอง
+See [LICENSE.md](LICENSE.md) for details. Individual components are subject to their own licenses.
 
