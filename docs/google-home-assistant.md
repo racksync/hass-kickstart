@@ -28,7 +28,8 @@
     *   ไปที่: [https://console.home.google.com/projects/create](https://console.home.google.com/projects/create).
     *   **Project name:** ตั้งชื่อโปรเจกต์ (ต้องไม่ซ้ำกับใครในระบบ Google เช่น `hass-ชื่อของคุณ-12345`).
     *   คลิก **Create project**.
-    ![Google Home Console](assets/google-home-01.png) 
+  
+    ![Google Home Console](assets/google-home-1.png) 
 
 3.  **ตั้งค่า Account Linking (OAuth) ใน Google Cloud Console สำหรับนำไปใช้ในข้อถัดไป:**
     *   ไปที่ [Google Cloud Console](https://console.cloud.google.com/).
@@ -37,7 +38,8 @@
     *   เลือก **Credentials**.
     *   คลิก **+ CREATE CREDENTIALS** -> **OAuth client ID**.
     *   ตั้งค่่า **App Information**:
-    ![App Information](assets/google-home-03.png) 
+  
+    ![App Information](assets/google-home-3.png) 
 
         *   **Application type:** เลือก **Web application**.
         *   **App Name:** ตั้งชื่อ (เช่น `Google Assistant`).
@@ -47,13 +49,14 @@
         *   **Agree to the terms of service:** ติ๊กถูกที่ช่องนี้ จากนั้นกด **Create**.
     *   ไปที่เมนู **Clients** -> **OAuth 2.0 Client IDs**.
     *   คลิกที่ **Create client** ระบุ Application type เป็น **Web application** และ ตั้งชื่อ (เช่น `Google Assistant`).
-    *   **Authorized redirect URIs:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/authorize` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
-    ![Authorized redirect URIs](assets/google-home-02.png) 
+    *   **Authorized redirect URIs:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/authorize` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ)
+    *   
+    ![Authorized redirect URIs](assets/google-home-2.png) 
 
     *   คลิก **Create**.
     *   ในหน้าถัดไปจะมีข้อมูล Client ID และ Client Secret ให้นำไปใช้ในขั้นตอนถัดไป.
 
-1.  **ตั้งค่า Integration Google Home:**
+4.  **ตั้งค่า Integration Google Home:**
     *   กลับไปที่ [Google Home Console](https://console.home.google.com) ตั้งค่าต่อจากข้อ 2.
     *   ในหน้าถัดไป (หรือไปที่โปรเจกต์ที่สร้างแล้ว) เลือก **+ Add integration**.
     *   เลือก **Cloud-to-cloud** และคลิก **Next: Develop**.
@@ -62,7 +65,8 @@
     *   **Device type:** เลือกประเภทอุปกรณ์ (เช่น Computer).
     *   **App icon:** อัปโหลดไอคอน .png ขนาด 144x144px.
     *   **Account Linking:**
-    ![App Information](assets/google-home-04.png) 
+    *   
+    ![App Information](assets/google-home-4.png) 
 
         *   **OAuth Client ID:** ใส่ `https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID` (แทน `YOUR_PROJECT_ID` ด้วย Project ID ที่ได้จากขั้นตอนที่ 3 (ตัวอย่าง `548725444099-3p3nl6ex69e6lh3kbvbob04vb5lljhbf.apps.googleusercontent.com`).
         *   **Client secret:** ใส่ Client Secret ที่ได้จากขั้นตอนที่ 3.
@@ -76,13 +80,13 @@
         *   เพิ่ม Scope ที่สอง: `name`.
         *   คลิก **Next**.
 
-2.  **เปิดใช้งาน HomeGraph API:**
+5.  **เปิดใช้งาน HomeGraph API:**
     *   ไปที่ [Google Cloud Console](https://console.cloud.google.com/).
     *   เลือกโปรเจกต์ที่คุณสร้างในขั้นตอนที่ 2.
     *   ไปที่ APIs & Services -> Library.
     *   ค้นหา "Google HomeGraph API" และเปิดใช้งาน (Enable).
 
-3.  **สร้าง Service Account Key:**
+6.  **สร้าง Service Account Key:**
     *   ใน [Google Cloud Console](https://console.cloud.google.com/) ไปที่ APIs & Services -> Credentials.
     *   คลิก **+ CREATE CREDENTIALS** -> **Service account**.
     *   ตั้งชื่อ Service account (เช่น `google-assistant-hass`) แล้วคลิก **CREATE AND CONTINUE**.
@@ -94,7 +98,7 @@
     *   เลือก **JSON** เป็น Key type แล้วคลิก **CREATE**.
     *   ไฟล์ JSON จะถูกดาวน์โหลด ให้นำไปอัพโหลดไว้ที่ `config/google_service_account.json` ไฟล์นี้จะใช้ในการ includes ไว้ใน `configuration.yaml`.
 
-4.  **กำหนดค่าใน Home Assistant:**
+7.  **กำหนดค่าใน Home Assistant:**
     *   เพิ่ม `google_assistant: !include includes/google_assistant.yaml` ใน `configuration.yaml`.
     *   ไฟล์ `google_assistant.yaml` จะมีตัวอย่างการตั้งค่าให้แล้ว สามารถปรับแต่งได้ตามต้องการ:
       ```yaml
@@ -113,7 +117,7 @@
         - camera
       ```
 
-5.  **Restart Home Assistant:** หลังจากแก้ไข `configuration.yaml` ให้ Restart Home Assistant.
+8.  **Restart Home Assistant:** หลังจากแก้ไข `configuration.yaml` ให้ Restart Home Assistant.
 
 ## การแก้ไขปัญหาทั่วไป
 
