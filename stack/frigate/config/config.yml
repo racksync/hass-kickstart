@@ -1,0 +1,102 @@
+mqtt:
+  host: 192.168.10.1
+  port: 1883
+  topic_prefix: frigate
+  client_id: frigate
+  user: frigate
+  password: frigate
+  stats_interval: 10
+
+##############################
+###  For NEW GEN Intel CPU ###
+##############################
+# ffmpeg:
+#   hwaccel_args:
+#     -hwaccel vaapi
+#     -hwaccel_device /dev/dri/renderD128
+
+
+  #output_args:
+  #  record: -f segment -segment_time 10 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c:v copy -c:a aac
+
+birdseye:
+  enabled: False
+
+snapshots:
+  enabled: True
+  timestamp: False
+  bounding_box: True
+  crop: False
+  height: 720
+  required_zones: []
+  retain:
+    default: 90
+    objects:
+      person: 180
+      #car: 15
+      #motorcycle: 7
+
+record:
+  enabled: True
+  events:
+    retain:
+      default: 180
+
+
+objects:
+  track:
+    - person
+    #- car
+    #- motorcycle
+
+cameras:
+  frigate_cam_01:
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:password@192.168.10.10/h264_stream
+          roles:
+            - detect
+    detect:
+      width: 1280
+      height: 720
+      enabled: True
+      fps: 5
+    record:
+      enabled: False
+
+  frigate_cam_02:
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:password@192.168.10.10/h264_stream
+          roles:
+            - detect
+    detect:
+      width: 1280
+      height: 720
+      enabled: True
+      fps: 5
+    record:
+      enabled: False
+
+detectors:
+  coral:
+    type: edgetpu
+    device: usb
+
+#detectors:
+#  cpu1:
+#    type: cpu
+#  cpu2:
+#    type: cpu
+#  cpu3:
+#    type: cpu
+#  cpu4:
+#    type: cpu
+#  cpu5:
+#    type: cpu
+#  cpu6:
+#    type: cpu
+#  cpu7:
+#    type: cpu
+#  cpu8:
+#    type: cpu
