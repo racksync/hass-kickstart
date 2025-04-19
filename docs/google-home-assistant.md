@@ -1,12 +1,12 @@
 # การตั้งค่า Google Assistant สำหรับ Home Assistant (แบบ Manual) อัพเดท 2025
 
-เอกสารนี้สรุปขั้นตอนการตั้งค่า Google Assistant integration สำหรับ Home Assistant ด้วยวิธี Manual โดยอ้างอิงจาก [เอกสารอย่างเป็นทางการของ Home Assistant](https://www.home-assistant.io/integrations/google_assistant/)
+สรุปขั้นตอนการตั้งค่า Google Assistant integration สำหรับ Home Assistant ด้วยวิธี Manual โดยอ้างอิงจาก [เอกสารอย่างเป็นทางการของ Home Assistant](https://www.home-assistant.io/integrations/google_assistant/) แต่เนื่องจากเอกสารต้นทางยังไม่ได้อัพเดทให้เนื้อหาเป็นปัจจุบัน จึงได้จัดทำคู่มือนี้ขึ้นเพื่อให้เข้าใจง่ายขึ้น ดังนั้นควรตรวจสอบเอกสารล่าสุดจาก Google เสมอ
 
 ## ขั้นตอนแบบสังเขป
 
 -   `configuration.yaml` จะต้อง มีการตั้งค่า `http` ให้ถูกต้อง โดยใน `cors_allowed_origins` จะต้องระบุ External URL ของ Home Assistant
--   ต้องมี External URL ที่สามารถเข้าถึงได้จากภายนอก (เช่น DuckDNS หรือ Cloudflare Tunnel)
--   ต้องมี SSL Certificate ที่ถูกต้อง (เช่น Let's Encrypt)
+-   ต้องมี External URL ที่สามารถเข้าถึงได้จากภายนอก (เช่น  Cloudflare Tunnel)
+-   ต้องมี SSL Certificate ที่ถูกต้อง (เช่น Let's Encrypt  หรือ Cloudflare)
 -   ต้องมี Google Account ที่สามารถเข้าถึง Google Home Developer Console
 -   ต้องมี Google Cloud Project ที่เปิดใช้งาน HomeGraph API
 -   ต้องมี Service Account Key ที่ดาวน์โหลดจาก Google Cloud Console
@@ -127,3 +127,10 @@
 *   ตรวจสอบการตั้งค่า Account Linking ใน Actions Console อีกครั้ง.
 
 **หมายเหตุ:** ขั้นตอนอาจมีการเปลี่ยนแปลงตามการอัปเดตของ Google และ Home Assistant โปรดอ้างอิงเอกสารทางการล่าสุดเสมอ.
+
+## แหล่งข้อมูลเพิ่มเติม
+- [Issue](https://github.com/home-assistant/core/issues/132515)
+- [Google Assistant Integration](https://www.home-assistant.io/integrations/google_assistant/)
+- [Google Cloud Console](https://console.cloud.google.com/)
+- [Google Home Developer Console](https://console.home.google.com/)
+- [Google Assistant API](https://developers.google.com/assistant/sdk)
