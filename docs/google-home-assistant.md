@@ -28,7 +28,7 @@
     *   ไปที่: [https://console.home.google.com/projects/create](https://console.home.google.com/projects/create).
     *   **Project name:** ตั้งชื่อโปรเจกต์ (ต้องไม่ซ้ำกับใครในระบบ Google เช่น `hass-ชื่อของคุณ-12345`).
     *   คลิก **Create project**.
-    [Google Home Console](assets/google-home-01.png) 
+    [image](assets/google-home-01.png) 
 
 3.  **ตั้งค่า Account Linking (OAuth) ใน Google Cloud Console สำหรับนำไปใช้ในข้อถัดไป:**
     *   ไปที่ [Google Cloud Console](https://console.cloud.google.com/).
@@ -37,7 +37,7 @@
     *   เลือก **Credentials**.
     *   คลิก **+ CREATE CREDENTIALS** -> **OAuth client ID**.
     *   ตั้งค่่า **App Information**:
-    [App Information](assets/google-home-03.png) 
+    [image](assets/google-home-03.png) 
 
         *   **Application type:** เลือก **Web application**.
         *   **App Name:** ตั้งชื่อ (เช่น `Google Assistant`).
@@ -48,8 +48,7 @@
     *   ไปที่เมนู **Clients** -> **OAuth 2.0 Client IDs**.
     *   คลิกที่ **Create client** ระบุ Application type เป็น **Web application** และ ตั้งชื่อ (เช่น `Google Assistant`).
     *   **Authorized redirect URIs:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/authorize` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ).
-    [Authorized redirect URIs](assets/google-home-02.png) 
-
+    [image](assets/google-home-02.png) 
     *   คลิก **Create**.
     *   ในหน้าถัดไปจะมีข้อมูล Client ID และ Client Secret ให้นำไปใช้ในขั้นตอนถัดไป.
 
@@ -62,7 +61,7 @@
     *   **Device type:** เลือกประเภทอุปกรณ์ (เช่น Computer).
     *   **App icon:** อัปโหลดไอคอน .png ขนาด 144x144px.
     *   **Account Linking:**
-    [App Information](assets/google-home-04.png) 
+    [image](assets/google-home-04.png) 
 
         *   **OAuth Client ID:** ใส่ `https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID` (แทน `YOUR_PROJECT_ID` ด้วย Project ID ที่ได้จากขั้นตอนที่ 3 (ตัวอย่าง `548725444099-3p3nl6ex69e6lh3kbvbob04vb5lljhbf.apps.googleusercontent.com`).
         *   **Client secret:** ใส่ Client Secret ที่ได้จากขั้นตอนที่ 3.
