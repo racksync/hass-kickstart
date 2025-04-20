@@ -126,6 +126,8 @@
 *   ตรวจสอบ Log ของ Home Assistant และ [Google Cloud Console](https://console.cloud.google.com/) เพื่อหาข้อผิดพลาด
 *   ตรวจสอบการตั้งค่า Account Linking ใน [Credentials](https://console.cloud.google.com/apis/credentials) อีกครั้ง
 
+9.  **เปิด App Google Home เชื่อมต่อ Link with Google แล้วเลือก App ที่ได้ตั้งค่าไว้ กรอก username / password ของ Home Assistant ตามปกติ**
+
 **หมายเหตุ:** ขั้นตอนอาจมีการเปลี่ยนแปลงตามการอัปเดตของ Google และ Home Assistant โปรดอ้างอิงเอกสารทางการล่าสุดเสมอ
 
 ## แหล่งข้อมูลเพิ่มเติม
