@@ -1,10 +1,6 @@
 ## Docker Stacks Overview
 
-- `stack/homeassistant/` – Stack หลักของ Home Assistant (Automation, MQTT, Zigbee, Node-RED, Portainer)
-- `stack/data-logger/` – Stack สำหรับ Data Logging และ Visualization (InfluxDB, Grafana, MariaDB, Chronograf, phpMyAdmin)
-- `stack/frigate/` – Stack สำหรับ NVR และ AI Video Analytics (Frigate)
-
-แต่ละ stack จะมีไฟล์ `docker-compose.yml` และ `.env` สำหรับการตั้งค่าของตัวเอง
+สำหรับติดตั้ง Home Assistant และบริการที่เกี่ยวข้องใน Docker โดยใช้ Docker Compose โดยแต่ละ stack จะมีไฟล์ `docker-compose.yml` และ `.env` สำหรับการตั้งค่าของตัวเอง
 
 ## Directory Structure
 
