@@ -10,18 +10,18 @@ Repository เตรียม Docker Compose สำหรับเริ่ม�
 - [Home Assistant Boilerplate](stack/homeassistant/ha_config/)
 
 
-### 📚 Automation Training
+### Automation Training
 
-- 🛒 [สินค้าและบริการ](http://racksync.com)
-- 📖 [เทรนนิ่งคอร์ส](https://facebook.com/racksync)
+- [สินค้าและบริการ](http://racksync.com)
+- [เทรนนิ่งคอร์ส](https://facebook.com/racksync)
 
-### 👥 Community
+### Community
 
-- 🏘️ [Home Automation Thailand](https://www.facebook.com/groups/hathailand)
-- 🛍️ [Home Automation Marketplace](https://www.facebook.com/groups/hatmarketplace)
-- 💬 [Home Automation Thailand Discord](https://discord.gg/Wc5CwnWkp4) 
+- [Home Automation Thailand](https://www.facebook.com/groups/hathailand)
+- [Home Automation Marketplace](https://www.facebook.com/groups/hatmarketplace)
+- [Home Automation Thailand Discord](https://discord.gg/Wc5CwnWkp4) 
 
-## 🏢 [RACKSYNC CO., LTD.](https://racksync.com)
+## [RACKSYNC CO., LTD.](https://racksync.com)
 
 RACKSYNC is a leading expert in Automation and Smart Solutions of all scales. We provide comprehensive consulting services, system implementation, installation, and monitoring by experienced professionals. Additionally, we are a full-service Software as a Service development company.
 \
