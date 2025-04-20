@@ -2,7 +2,7 @@
 
 ![image](assets/screenshot.png)
 
-Repository เตรียม Docker Compose สำหรับเริ่มต้นใช้งาน Home Assistant และบริการที่เกี่ยวข้องได้อย่างรวดเร็ว โดยแต่ละ stack จะถูกจัดเก็บไว้ในโฟลเดอร์ของตัวเองภายใต้ `stack/` เพื่อให้ง่ายต่อการติดตั้ง ดูแลรักษา และขยายระบบ smart home ของคุณ รวมถึงมี boilerplate (แม่แบบตั้งค่าสำเร็จรูปพร้อมใช้) สำหรับการตั้งค่า Home Assistant ที่สามารถนำไปใช้ได้ทันที โดยภายในประกอบด้วยการตั้งค่าพื้นฐานที่จำเป็น พร้อมสำหรับการใช้งาน โดยสามารถนำไปใช้กับ Home Assistant ในรูปแบบการติดตั้งแบบอื่นได้ เช่น การติดตั้งบน  Virtual Machine หรือ Home Assistant OS หรือ Supervised 
+Repository เตรียม Docker Compose สำหรับเริ่มต้นใช้งาน Home Assistant และบริการที่เกี่ยวข้องได้อย่างรวดเร็ว โดยแต่ละ stack จะถูกจัดเก็บไว้ในโฟลเดอร์ของตัวเองภายใต้ `docker stack` เพื่อให้ง่ายต่อการติดตั้ง ดูแลรักษา และขยายระบบ smart home ของคุณ รวมถึงมี boilerplate (แม่แบบตั้งค่าสำเร็จรูปพร้อมใช้) สำหรับการตั้งค่า Home Assistant ที่สามารถนำไปใช้ได้ทันที โดยภายในประกอบด้วยการตั้งค่าพื้นฐานที่จำเป็น พร้อมสำหรับการใช้งาน โดยสามารถนำไปใช้กับ Home Assistant ในรูปแบบการติดตั้งแบบอื่นได้ เช่น การติดตั้งบน  Virtual Machine หรือ Home Assistant OS หรือ Supervised พร้อมทั้งการ config ที่จำเป็นสำหรับการใช้งานร่วมกับ Google Assistant และ components อื่นๆ ที่จำเป็นสำหรับการใช้งาน
 
 ## Table of Contents
 - [Home Assistant Docker Stacks](stack/README.md)
