@@ -123,8 +123,8 @@
 
 *   ตรวจสอบ External URL และ SSL Certificate ให้ถูกต้อง
 *   ตรวจสอบว่า `google_assistant:` ใน `configuration.yaml` ถูกต้องและไฟล์ Service Account JSON เข้าถึงได้
-*   ตรวจสอบ Log ของ Home Assistant และ Google Cloud Console เพื่อหาข้อผิดพลาด
-*   ตรวจสอบการตั้งค่า Account Linking ใน Actions Console อีกครั้ง
+*   ตรวจสอบ Log ของ Home Assistant และ [Google Cloud Console](https://console.cloud.google.com/) เพื่อหาข้อผิดพลาด
+*   ตรวจสอบการตั้งค่า Account Linking ใน [Credentials](https://console.cloud.google.com/apis/credentials) อีกครั้ง
 
 **หมายเหตุ:** ขั้นตอนอาจมีการเปลี่ยนแปลงตามการอัปเดตของ Google และ Home Assistant โปรดอ้างอิงเอกสารทางการล่าสุดเสมอ
 
