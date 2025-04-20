@@ -41,12 +41,12 @@
   
     ![App Information](assets/google-home-3.png) 
 
-        *   **Application type:** เลือก **Web application**
-        *   **App Name:** ตั้งชื่อ (เช่น `Google Assistant`)
-        *   **User support email:** ใส่อีเมลที่สามารถติดต่อได้ จากนั้นกด **Next**
-        *   **Audience** เลือก **External** (ถ้ามี) จากนั้นกด **Next**
-        *   **Contact information:** ใส่ข้อมูลการติดต่อ (อีเมล) จากนั้นกด **Next**
-        *   **Agree to the terms of service:** ติ๊กถูกที่ช่องนี้ จากนั้นกด **Create**
+    *   **Application type:** เลือก **Web application**
+    *   **App Name:** ตั้งชื่อ (เช่น `Google Assistant`)
+    *   **User support email:** ใส่อีเมลที่สามารถติดต่อได้ จากนั้นกด **Next**
+    *   **Audience** เลือก **External** (ถ้ามี) จากนั้นกด **Next**
+    *   **Contact information:** ใส่ข้อมูลการติดต่อ (อีเมล) จากนั้นกด **Next**
+    *   **Agree to the terms of service:** ติ๊กถูกที่ช่องนี้ จากนั้นกด **Create**
     *   ไปที่เมนู **Clients** -> **OAuth 2.0 Client IDs**
     *   คลิกที่ **Create client** ระบุ Application type เป็น **Web application** และ ตั้งชื่อ (เช่น `Google Assistant`)
     *   **Authorized redirect URIs:** ใส่ `https://YOUR_HOME_ASSISTANT_URL/auth/authorize` (แทน `YOUR_HOME_ASSISTANT_URL` ด้วย External URL ของคุณ)
